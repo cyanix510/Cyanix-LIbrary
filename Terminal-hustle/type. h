@@ -1,0 +1,23 @@
+#pragma once
+#include <iostream>
+#include <chrono>
+#include <thread>
+#include <string>
+namespace CX{int type_speed{90};
+void Type(const std::string& value, const int speed)
+{
+    for (int i = 0; i < value.size(); i += 1)
+    {
+        std::cout << value[i] << std::flush;
+        std::this_thread::sleep_for(std::chrono::milliseconds(speed));
+    }
+}
+void Type(const std::string& value)
+{
+    for (int i = 0; i < value.size(); i += 1)
+    {
+        std::cout << value[i] << std::flush;
+        std::this_thread::sleep_for(std::chrono::milliseconds(type_speed));
+    }
+}
+}
