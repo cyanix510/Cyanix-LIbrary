@@ -1,4 +1,4 @@
-# Cyanix
+# Cyanix Library 
 
 > **«Lightweight C++ Console Utilities»**
 
