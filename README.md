@@ -1,29 +1,31 @@
-<div align="center"><span style="color:#00D9FF">CYANIX</span>
+<div align="center">⚡ CYANIX
 
-⚡ Lightweight C++ Console Utilities
+Lightweight C++ Console Utilities
 
-Simple · Fast · Clean · C++
+Simple · Clean · Fast
 
-""C++" (https://img.shields.io/badge/C%2B%2B-17%2B-00D9FF?style=for-the-badge&logo=cplusplus&logoColor=white)" (#)
-""Header Only" (https://img.shields.io/badge/Header--Only-121417?style=for-the-badge)" (#)
-""Status" (https://img.shields.io/badge/Status-Developing-00D9FF?style=for-the-badge)" (#)
+"C++17" (https://img.shields.io/badge/C%2B%2B-17%2B-00D9FF?style=for-the-badge&logo=cplusplus&logoColor=white)
+"Header Only" (https://img.shields.io/badge/HEADER--ONLY-121417?style=for-the-badge)
+"Status" (https://img.shields.io/badge/STATUS-DEVELOPING-00D9FF?style=for-the-badge)
 
 </div>---
 
 ⚡ What is Cyanix?
 
-Cyanix is a lightweight C++ utility library designed to make console applications cleaner and easier to build.
+Cyanix is a lightweight C++ library for building clean and interactive console applications.
 
-No complicated setup.
-No external dependencies.
-Just useful utilities.
+It provides simple utilities for:
+
+- 🖨️ Console printing
+- ⌨️ User input
+- ⌛ Typewriter text
+- ⚙️ Configurable typing speed
 
 ---
 
 🚀 Quick Start
 
 #include "Cyanix.h"
-
 #include <string>
 
 int main()
@@ -31,9 +33,7 @@ int main()
     std::string name;
 
     CX::Type("Welcome to Cyanix!\n");
-
     CX::Ask("What's your name: ", name);
-
     CX::Print("Hello, ", name, "!\n");
 }
 
@@ -47,43 +47,33 @@ Hello, Pranav!
 
 ✨ Features
 
-Utility| Description
-"CX::Print()"| Print multiple values at once
-"CX::Ask()"| Read input with an optional prompt
-"CX::Type()"| Typewriter-style text output
-"CX::type_speed"| Control default typing speed
+🖨️ "CX::Print"
 
----
+Print multiple values in a single call.
 
-🧩 API
+CX::Print("Score: ", 100, '\n');
 
-"CX::Print()"
+⌨️ "CX::Ask"
 
-CX::Print("Health: ", 100, "\n");
-
-Supports multiple values through a variadic template.
-
----
-
-"CX::Ask()"
+Take input with an optional prompt.
 
 std::string name;
 
 CX::Ask("Name: ", name);
 
-Or without a prompt:
+Without a prompt:
 
 int age;
 
 CX::Ask(age);
 
----
+⌛ "CX::Type"
 
-"CX::Type()"
+Print text character-by-character.
 
 CX::Type("Loading...", 50);
 
-The second parameter is the delay between characters in milliseconds.
+The second argument specifies the delay in milliseconds.
 
 Use the default speed:
 
@@ -101,12 +91,12 @@ CX::type_speed = 40;
 - Standard C++ library
 - Header-only
 
-Uses:
+Dependencies
 
-iostream
-string
-thread
-chrono
+<iostream>
+<string>
+<thread>
+<chrono>
 
 ---
 
@@ -122,18 +112,16 @@ Cyanix/
 
 🎯 Philosophy
 
-«Keep C++ simple. Keep control.»
+«Less boilerplate. More control.»
 
-Cyanix doesn't try to replace the standard library.
-
-It provides a small layer of clean, reusable utilities for console applications.
+Cyanix is designed to stay small, readable, and easy to use while keeping the power and control of standard C++.
 
 ---
 
 <div align="center">CYANIX
 
-Built with C++ · Made for developers
+C++ · Console · Utilities
 
-© Pranav Lal
+Made by Pranav Lal
 
 </div>
