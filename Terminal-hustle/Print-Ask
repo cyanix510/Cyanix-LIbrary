@@ -1,0 +1,38 @@
+#include <iostream>
+#include <thread>
+#include <string>
+#include <string_view>
+#include <chrono>
+
+namespace CX
+{
+template <typename T>
+void tPrint(const T& element)
+{
+    std::cout << element;
+}
+
+template <typename... T>
+void Print(const T... list)
+{
+    (tPrint(list), ...);
+}
+template <typename T>
+void Ask(T &&object)
+{
+    std::cin >> object;
+}
+template <typename T>
+void Ask(const char statement[], T &&object)
+{
+    Print(statement);
+    std::cin >> object;
+}
+} // namespace CX
+
+using namespace CX;
+
+int main()
+{
+    Ask("What's your name: ", std::string{});
+}
