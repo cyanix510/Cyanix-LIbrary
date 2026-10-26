@@ -1,5 +1,5 @@
 #ifndef TERUSTO_header
-#def TERUSTO_header
+#define TERUSTO_header
 #include <iostream>
 #include <string_view>
 namespace CX
