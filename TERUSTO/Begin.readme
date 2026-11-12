@@ -1,0 +1,1 @@
+This version of TERUSTO needs to be linked everytime you compile your pragram. That's using builders like CMake is highly apppreciatable.
